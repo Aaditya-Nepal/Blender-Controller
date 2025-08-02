@@ -1,43 +1,47 @@
-# Blender 3D objects Controller
+# Blender 3D Objects Controller
 
-A real-time hand tracking system that allows you to control 3D objects inside Blender using your webcam and Mediapipe. This project uses a socket connection to send landmark data from a Python OpenCV/Mediapipe server to Blender
+A real-time hand tracking system that allows you to control 3D objects inside Blender using your webcam and Mediapipe. This project uses a socket connection to send hand landmark data from a Python OpenCV/Mediapipe server to Blender.
 
 ---
 
 ## 🎯 Features
 
-- Real-time hand landmark detection using Mediapipe.
-- Smooth communication between Python and Blender via sockets.
-- 3D object control in Blender based on:
-  - Palm position ➝ Object position
-  - Index finger direction ➝ Object rotation
-  - Pinch distance ➝ Object scale
-- Toggle and restart support for development flexibility.
+- Real-time hand landmark detection using Mediapipe  
+- Smooth communication between Python and Blender via TCP sockets  
+- 3D object control based on:  
+  - Palm position → Object position  
+  - Index finger direction → Object rotation  
+  - Pinch distance → Object scale  
+- Support for toggling and restarting for flexible development  
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category        | Tools/Libraries             |
-|----------------|-----------------------------|
-| Language        | Python 3                    |
-| Hand Tracking   | Mediapipe                   |
-| Visualization   | OpenCV                      |
-| 3D Software     | Blender (with `bpy`)        |
-| Communication   | Socket (TCP)                |
+| Category        | Tools/Libraries         |
+|-----------------|------------------------|
+| Language        | Python 3               |
+| Hand Tracking   | Mediapipe              |
+| Visualization   | OpenCV                 |
+| 3D Software     | Blender (`bpy` module) |
+| Communication   | TCP Socket             |
 
 ---
 
 ## 📦 Installation & Setup
 
-Just copy and paste code in you code editor 
+1. Copy the code files into your code editor.  
+2. Install the required packages:
 
-install requirments:
-pip install opencv-python mediapipe bpy
+   ```bash
+   pip install opencv-python mediapipe bpy
+   
+Files overview:
+  server.py — Tracks hand using Mediapipe
+  blenderController.py — Runs inside Blender and connects to the server
 
-server.py              # Tracks hand using Mediapipe
-blenderController.py   # Runs inside Blender, connects to the server
-
-After copy and pasting code first run the server.py inside your ide after that copy blenderController and paste it inside the blnder project
-which you want to control remember before doing this dont forget to run the server.py in background in your ide
+Usage instructions:
+  First, run server.py in your IDE.
+  Then, copy blenderController.py into your Blender project.
+  Make sure server.py is running in the background before running the Blender script.
 
