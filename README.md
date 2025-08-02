@@ -1,8 +1,6 @@
-# Blender 3D object controller
+# Blender 3D objects Controller
 
-A real-time hand tracking system that allows you to control 3D objects inside Blender using your webcam and Mediapipe. 
-This project uses a socket connection to send landmark data from a Python. 
-OpenCV/Mediapipe server to Blender, enabling intuitive manipulation (position, rotation, and scale) of 3D models based on your hand movement.
+A real-time hand tracking system that allows you to control 3D objects inside Blender using your webcam and Mediapipe. This project uses a socket connection to send landmark data from a Python OpenCV/Mediapipe server to Blender
 
 ---
 
@@ -32,8 +30,14 @@ OpenCV/Mediapipe server to Blender, enabling intuitive manipulation (position, r
 
 ## 📦 Installation & Setup
 
-### 1. Clone the repository
+Just copy and paste code in you code editor 
 
-```bash
-git clone https://github.com/yourusername/blender-hand-tracking.git
-cd blender-hand-tracking
+install requirments:
+pip install opencv-python mediapipe bpy
+
+server.py              # Tracks hand using Mediapipe
+blenderController.py   # Runs inside Blender, connects to the server
+
+After copy and pasting code first run the server.py inside your ide after that copy blenderController and paste it inside the blnder project
+which you want to control remember before doing this dont forget to run the server.py in background in your ide
+
