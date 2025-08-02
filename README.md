@@ -36,12 +36,14 @@ A real-time hand tracking system that allows you to control 3D objects inside Bl
    ```bash
    pip install opencv-python mediapipe bpy
    
-Files overview:
-  server.py — Tracks hand using Mediapipe
-  blenderController.py — Runs inside Blender and connects to the server
+## Files overview
 
-Usage instructions:
-  First, run server.py in your IDE.
-  Then, copy blenderController.py into your Blender project.
-  Make sure server.py is running in the background before running the Blender script.
+- server.py — Tracks hand using Mediapipe
+- blenderController.py — Runs inside Blender and connects to the server
+
+## Usage instructions
+
+- First, run server.py in your IDE.
+- Then, copy blenderController.py into your Blender project.
+- Make sure server.py is running in the background before running the Blender script.
 
